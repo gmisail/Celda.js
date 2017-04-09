@@ -6,7 +6,7 @@ for(var y = 0; y < 300; y++){
     for(var x = 0; x < 300; x++){
         grid[y].push(0);
 
-        if(Math.random() * 100 < 5){
+        if(Math.random() * 100 < 75){
             grid[y][x] = 1;
         }
     }
@@ -24,6 +24,10 @@ function getNeighbors(x, y){
         if(grid[y + 1][x + 1] == 1) i++;
         if(grid[y - 1][x + 1] == 1) i++;
         if(grid[y + 1][x - 1] == 1) i++;
+         if(grid[y][x - 2] == 1) i++;
+        if(grid[y][x + 2] == 1) i++;
+        if(grid[y - 2][x] == 1) i++;
+        if(grid[y + 2][x] == 1) i++;
     }catch(e){
 
     }
